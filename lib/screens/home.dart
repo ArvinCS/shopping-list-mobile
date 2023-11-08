@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'card.dart';
-import 'models/shopitem.dart';
+import '../widgets/shop_card.dart';
+import '../models/shopitem.dart';
+import '../widgets/left_drawer.dart';
 
 class MyHomePage extends StatelessWidget {
   final List<ShopItem> items = [
@@ -19,7 +20,10 @@ class MyHomePage extends StatelessWidget {
         title: const Text(
           'Shopping List',
         ),
+        backgroundColor: Colors.indigo,
+        foregroundColor: Colors.white,
       ),
+      drawer: const LeftDrawer(),
       body: SingleChildScrollView(
         // Widget wrapper yang dapat discroll
         child: Padding(
