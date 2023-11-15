@@ -123,6 +123,9 @@ class _ShopFormPageState extends State<ShopFormPage> {
                       if (_formKey.currentState!.validate()) {
                         // Kirim ke Django dan tunggu respons
                         // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
+                        // Ganti jadi localhost:8000 jika di chrome
+                        // Ganti jadi 10.0.2.2 jika di emulator
+                        // Ganti jadi web paas pbp
                         final response = await request.postJson(
                           "http://localhost:8000/create-flutter/",
                           jsonEncode(<String, String>{
