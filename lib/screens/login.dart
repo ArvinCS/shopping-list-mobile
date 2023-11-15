@@ -53,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
                 // gunakan URL http://10.0.2.2/
                 // Ganti jadi localhost:8000 jika di chrome
                 // Ganti jadi 10.0.2.2 jika di emulator
-                // Ganti jadi web paas pbp
+                // Ganti jadi arvin-tutorial.pbp.cs.ui.ac.id jika di web paas pbp
                 final response = await request.login(
                   "http://localhost:8000/auth/login/",
                   {

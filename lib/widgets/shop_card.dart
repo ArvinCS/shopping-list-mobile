@@ -38,6 +38,13 @@ class ShopCard extends StatelessWidget {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ProductPage()));
           } else if (item.name == "Logout") {
+            // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
+            // Untuk menyambungkan Android emulator dengan Django pada localhost,
+            // gunakan URL http://10.0.2.2/
+            // Ganti jadi localhost:8000 jika di chrome
+            // Ganti jadi 10.0.2.2 jika di emulator
+            // Ganti jadi arvin-tutorial.pbp.cs.ui.ac.id jika di web paas pbp
+
             final response =
                 await request.logout("http://localhost:8000/auth/logout/");
             String message = response["message"];

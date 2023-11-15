@@ -14,6 +14,13 @@ class ProductPage extends StatefulWidget {
 
 class _ProductPageState extends State<ProductPage> {
   Future<List<Product>> fetchProduct() async {
+    // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
+    // Untuk menyambungkan Android emulator dengan Django pada localhost,
+    // gunakan URL http://10.0.2.2/
+    // Ganti jadi localhost:8000 jika di chrome
+    // Ganti jadi 10.0.2.2 jika di emulator
+    // Ganti jadi arvin-tutorial.pbp.cs.ui.ac.id jika di web paas pbp
+
     var url = Uri.parse('http://localhost:8000/json/');
     var response = await http.get(
       url,
